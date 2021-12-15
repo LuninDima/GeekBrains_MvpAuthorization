@@ -4,7 +4,6 @@ import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvpauthorization.mvpauthorization.UserAuthorizationScreen
-import com.example.mvpauthorization.mvpusers.UsersScreen
 import com.example.mvpauthorization.navigation.CustomNavigator
 
 class MainActivity : AppCompatActivity() {
