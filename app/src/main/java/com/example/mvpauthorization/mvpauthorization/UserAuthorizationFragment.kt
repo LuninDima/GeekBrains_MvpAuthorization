@@ -10,10 +10,11 @@ import com.example.mvpauthorization.databinding.UserAuthorizationBinding
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 
-class UserAuthorizationFragment: MvpAppCompatFragment(R.layout.user_authorization), UserAuthorizationView {
+class UserAuthorizationFragment : MvpAppCompatFragment(R.layout.user_authorization),
+    UserAuthorizationView {
 
     private lateinit var viewBinding: UserAuthorizationBinding
-    private var  user: GitHubUser = GitHubUser("", "")
+    private var user: GitHubUser = GitHubUser("", "")
     private val presenter: UserAuthorizationPresenter by moxyPresenter {
         UserAuthorizationPresenter(
             router = App.instance.router
@@ -23,8 +24,6 @@ class UserAuthorizationFragment: MvpAppCompatFragment(R.layout.user_authorizatio
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewBinding = UserAuthorizationBinding.bind(view)
-        user.login = ""
-        user.password = ""
         viewBinding.buttonNext.setOnClickListener {
             user.login = viewBinding.editTextLogin.text.toString()
             user.password = viewBinding.editTextTextPassword.text.toString()

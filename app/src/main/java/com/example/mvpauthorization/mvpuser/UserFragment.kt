@@ -3,18 +3,12 @@ package com.example.mvpauthorization.mvpuser
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.mvpauthorization.App
 import com.example.mvpauthorization.R
-import com.example.mvpauthorization.data.GitHubUser
-import com.example.mvpauthorization.data.GitHubUserRepositoryFactory
 import com.example.mvpauthorization.databinding.ViewUserBinding
-import com.github.terrakok.cicerone.Router
 import moxy.MvpAppCompatFragment
-import moxy.MvpPresenter
-import moxy.ktx.moxyPresenter
-import moxy.ktx.moxyPresenter
 
-class UserFragment: MvpAppCompatFragment(R.layout.view_user), UserView {
+
+class UserFragment : MvpAppCompatFragment(R.layout.view_user), UserView {
 
     private lateinit var viewBinding: ViewUserBinding
 

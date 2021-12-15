@@ -7,8 +7,9 @@ import com.example.mvpauthorization.mvpuser.UserScreen
 import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 
-class UserAuthorizationPresenter(private val router: Router
-):MvpPresenter<UserAuthorizationView>() {
+class UserAuthorizationPresenter(
+    private val router: Router
+) : MvpPresenter<UserAuthorizationView>() {
 
     fun displayUser(userLogin: String) =
         router.navigateTo(UserScreen(userLogin))

@@ -6,6 +6,5 @@ import moxy.viewstate.strategy.alias.SingleState
 
 
 interface UserAuthorizationView:MvpView {
-  //  @SingleState
-   // fun setUser(user: GitHubUser)
+
 }
